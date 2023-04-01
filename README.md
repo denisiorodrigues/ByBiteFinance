@@ -15,14 +15,14 @@
 
 # RF - Requisitos Funcionais
 
-- [ ] O usuário deve poder criar uma nova transação;
-- [ ] O usuário deve poder obter resumo da conta;
-- [ ] O usuário deve poder listas todas as transações que ocorreram;
-- [ ] O usuário deve poder visualizar uma transação única;
+- [x] O usuário deve poder criar uma nova transação;
+- [x] O usuário deve poder obter resumo da conta;
+- [x] O usuário deve poder listas todas as transações que ocorreram;
+- [x] O usuário deve poder visualizar uma transação única;
 
 # RN - Regra de Negócio
 
-- [ ] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
+- [x] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
 - [ ] Deve ser possível identificar os usuário entre as requisições;
 - [ ] O usuário só pode visualizar transações o qual ele criou;
 
