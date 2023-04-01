@@ -2,35 +2,67 @@ import { FastifyInstance } from 'fastify'
 import { z } from 'zod'
 import { randomUUID } from 'node:crypto'
 import { knex } from '../database'
+import { chckSessionIdExists } from '../middlewares/check-session-id-exists'
 
 export async function transactionsRoutes(app: FastifyInstance) {
-  app.get('/', async () => {
-    const transactions = await knex('transactions').select('*')
+  app.get(
+    '/',
+    {
+      preHandler: [chckSessionIdExists],
+    },
+    async (request, reply) => {
+      const { sessionId } = request.cookies
 
-    return { transactions }
-  })
+      const transactions = await knex('transactions')
+        .where('session_id', sessionId)
+        .select('*')
 
-  app.get('/sumary', async () => {
-    const sumary = await knex('transactions')
-      .sum('amount', {
-        as: 'amount',
+      return { transactions }
+    },
+  )
+
+  app.get(
+    '/sumary',
+    {
+      preHandler: [chckSessionIdExists],
+    },
+    async (request) => {
+      const { sessionId } = request.cookies
+      const sumary = await knex('transactions')
+        .where('session_id', sessionId)
+        .sum('amount', {
+          as: 'amount',
+        })
+        .first()
+
+      return { sumary }
+    },
+  )
+
+  app.get(
+    '/:id',
+    {
+      preHandler: [chckSessionIdExists],
+    },
+    async (request) => {
+      const getTransactionParamSchema = z.object({
+        id: z.string().uuid(),
       })
-      .first()
 
-    return { sumary }
-  })
+      const { sessionId } = request.cookies
 
-  app.get('/:id', async (request) => {
-    const getTransactionParamSchema = z.object({
-      id: z.string().uuid(),
-    })
+      const { id } = getTransactionParamSchema.parse(request.params)
 
-    const { id } = getTransactionParamSchema.parse(request.params)
+      const transaction = await knex('transactions')
+        .where({
+          session_id: sessionId,
+          id,
+        })
+        .first()
 
-    const transaction = await knex('transactions').where('id', id).first()
-
-    return { transaction }
-  })
+      return { transaction }
+    },
+  )
 
   app.post('/', async (request, reply) => {
     // { title, amount, type: credit ou dbit }
