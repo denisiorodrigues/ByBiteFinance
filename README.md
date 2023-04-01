@@ -1,8 +1,10 @@
-## ByBike - Pojeto para logistica de bikes
-# Descrição
+## ByBiteFinance - Pojeto para logistica de bikes
 
+# Descrição
+Um projeo para aplicar os conhecimento do curso de nodejs da rocketseat
 
 # Frameworks
+
 | Nome | Descrição | Link |
 | ------:| -----------:| -----------:|
 | fastify   | Micro framework para requisições http. Alternativa ao express | [fastify.io](https://www.fastify.io/) |
@@ -11,7 +13,8 @@
 | sqlite3 | Drive para acessar o banco de dados sqlite. | [github.com/TryGhost/node-sqlite3](https://github.com/TryGhost/node-sqlite3) |
 | dotenv | Configurar as variáveis de ambiente. | [github.com/motdotla/dotenv](https://github.com/motdotla/dotenv) |
 | zod | Validação para qualquer tipo de dados (Variáeis de amviente e dados que vem do servidor).  | [github.com/colinhacks/zod](https://github.com/colinhacks/zod) |
-| vitest | Framework de teste. Ele é mais raído que ojeste e não pecisa de muita configuração  | [vitest.dev](https://vitest.dev/) |
+| vitest | Framework para execução de teste. Ele é mais raído que ojeste e não pecisa de muita configuração  | [vitest.dev](https://vitest.dev/) |
+| supertest | Framework de teste para testes de requisições HTTP | [github.com/ladjs/supertest](https://github.com/ladjs/supertest#readme) |
 
 ## REGRAS
 
@@ -25,8 +28,9 @@
 # RN - Regra de Negócio
 
 - [x] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
-- [ ] Deve ser possível identificar os usuário entre as requisições;
-- [ ] O usuário só pode visualizar transações o qual ele criou;
+- [x] Deve ser possível identificar os usuário entre as requisições;
+- [x] O usuário só pode visualizar transações o qual ele criou;
 
 # RNF - Requisito Não Funcional
 
+- Não possui
