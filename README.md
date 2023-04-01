@@ -11,6 +11,7 @@
 | sqlite3 | Drive para acessar o banco de dados sqlite. | [github.com/TryGhost/node-sqlite3](https://github.com/TryGhost/node-sqlite3) |
 | dotenv | Configurar as variáveis de ambiente. | [github.com/motdotla/dotenv](https://github.com/motdotla/dotenv) |
 | zod | Validação para qualquer tipo de dados (Variáeis de amviente e dados que vem do servidor).  | [github.com/colinhacks/zod](https://github.com/colinhacks/zod) |
+| vitest | Framework de teste. Ele é mais raído que ojeste e não pecisa de muita configuração  | [vitest.dev](https://vitest.dev/) |
 
 ## REGRAS
 
