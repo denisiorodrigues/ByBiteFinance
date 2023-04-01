@@ -5,7 +5,7 @@ import { transactionsRoutes } from './routes/transactions'
 const app = fastify()
 // A ordem dos registros importa
 
-app.register(transactionsRoutes)
+app.register(transactionsRoutes, { prefix: 'transactions' })
 
 app
   .listen({
