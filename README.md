@@ -10,3 +10,21 @@
 | sqlite3 | Drive para acessar o banco de dados sqlite. | [github.com/TryGhost/node-sqlite3](https://github.com/TryGhost/node-sqlite3) |
 | dotenv | Configurar as variáveis de ambiente. | [github.com/motdotla/dotenv](https://github.com/motdotla/dotenv) |
 | zod | Validação para qualquer tipo de dados (Variáeis de amviente e dados que vem do servidor).  | [github.com/colinhacks/zod](https://github.com/colinhacks/zod) |
+
+## REGRAS
+
+# RF - Requisitos Funcionais
+
+- [ ] O usuário deve poder criar uma nova transação;
+- [ ] O usuário deve poder obter resumo da conta;
+- [ ] O usuário deve poder listas todas as transações que ocorreram;
+- [ ] O usuário deve poder visualizar uma transação única;
+
+# RN - Regra de Negócio
+
+- [ ] A transação pode ser do tipo crédito que somará ao valor total, ou débito subtrairá;
+- [ ] Deve ser possível identificar os usuário entre as requisições;
+- [ ] O usuário só pode visualizar transações o qual ele criou;
+
+# RNF - Requisito Não Funcional
+
