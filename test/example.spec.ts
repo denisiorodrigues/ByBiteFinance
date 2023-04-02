@@ -10,7 +10,7 @@ afterAll(async () => {
   await app.close()
 })
 
-test('o usuário consegue criar uma nova trasnação', async () => {
+test('user can created a new tarnsaction', async () => {
   // Fazer uma chamada HTTP para criar uma nova transação
   await request(app.server)
     .post('/transactions')
