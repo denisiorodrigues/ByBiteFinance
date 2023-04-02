@@ -15,6 +15,7 @@ Um projeo para aplicar os conhecimento do curso de nodejs da rocketseat
 | zod | Validação para qualquer tipo de dados (Variáeis de amviente e dados que vem do servidor).  | [github.com/colinhacks/zod](https://github.com/colinhacks/zod) |
 | vitest | Framework para execução de teste. Ele é mais raído que ojeste e não pecisa de muita configuração  | [vitest.dev](https://vitest.dev/) |
 | supertest | Framework de teste para testes de requisições HTTP | [github.com/ladjs/supertest](https://github.com/ladjs/supertest#readme) |
+| @types/supertest | Data types para o supertest funcionar com o typescript pois ela fi desenvolvida 100% com javascript. è mantida pela comunidade | [github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |
 
 ## REGRAS
 
@@ -34,3 +35,12 @@ Um projeo para aplicar os conhecimento do curso de nodejs da rocketseat
 # RNF - Requisito Não Funcional
 
 - Não possui
+
+
+## Tips And Tricks
+
+Corrigir o erro do eslint nas linhas do DRLF
+
+```
+git config --global core.autocrlf false
+```
