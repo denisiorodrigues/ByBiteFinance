@@ -16,7 +16,8 @@ Um projeo para aplicar os conhecimento do curso de nodejs da rocketseat
 | vitest | Framework para execução de teste. Ele é mais raído que ojeste e não pecisa de muita configuração  | [vitest.dev](https://vitest.dev/) |
 | supertest | Framework de teste para testes de requisições HTTP | [github.com/ladjs/supertest](https://github.com/ladjs/supertest#readme) |
 | @types/supertest | Data types para o supertest funcionar com o typescript pois ela fi desenvolvida 100% com javascript. É mantida pela comunidade | [github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) |
-| tsup |  Coverte o typescript para javascript de maneira rápida | [tsup.egoist.dev](https://tsup.egoist.dev/) |
+| tsup | Coverte o typescript para javascript de maneira rápida | [tsup.egoist.dev](https://tsup.egoist.dev/) |
+| pg | Base de dados do Postgresql | [github.com/brianc/node-postgres](https://github.com/brianc/node-postgres) |
 
 ## REGRAS
 
